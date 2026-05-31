@@ -1,0 +1,46 @@
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+    <hostname>CSR1kv-LAB36</hostname>
+    <interface>
+      <Loopback>
+        <name>36</name>
+        <description>NETCONF-Python deployed via GitHub</description>
+        <ip>
+          <address>
+            <primary>
+              <address>36.36.36.1</address>
+              <mask>255.255.255.255</mask>
+            </primary>
+          </address>
+        </ip>
+      </Loopback>
+      <Loopback>
+        <name>37</name>
+        <description>NETCONF-Python deployed via GitHub</description>
+        <ip>
+          <address>
+            <primary>
+              <address>37.37.37.1</address>
+              <mask>255.255.255.255</mask>
+            </primary>
+          </address>
+        </ip>
+      </Loopback>
+    </interface>
+    <router>
+      <ospf xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ospf">
+        <id>36</id>
+        <network>
+          <ip>36.36.36.1</ip>
+          <mask>0.0.0.0</mask>
+          <area>0</area>
+        </network>
+        <network>
+          <ip>37.37.37.1</ip>
+          <mask>0.0.0.0</mask>
+          <area>0</area>
+        </network>
+      </ospf>
+    </router>
+  </native>
+</config>
